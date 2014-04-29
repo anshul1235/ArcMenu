@@ -16,6 +16,7 @@
 
 package com.capricorn;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Rect;
@@ -199,7 +200,8 @@ public class ArcLayout extends ViewGroup {
         return animationSet;
     }
 
-    private void bindChildAnimation(final View child, final int index, final long duration) {
+    @SuppressLint("NewApi")
+	private void bindChildAnimation(final View child, final int index, final long duration) {
         final boolean expanded = mExpanded;
         final int centerX = getWidth() / 2;
         final int centerY = getHeight() / 2;
